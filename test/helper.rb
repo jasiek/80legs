@@ -12,7 +12,8 @@ require 'shoulda'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require '80legs'
+require 'eighty_legs'
 
 class Test::Unit::TestCase
+  include EightyLegs
 end
