@@ -1,6 +1,15 @@
 = 80legs
 
-Description goes here.
+Usage:
+
+  require 'eighty_legs'
+  f = EightyLegs::EightyFormat.new("sample_file.80")
+  f.each do |entry|
+    puts entry.url
+    puts entry.data
+  end
+
+Note: If an IO is passed in instead of a file name, then that instance of IO needs to be managed (closed) manually.
 
 == Contributing to 80legs
  
