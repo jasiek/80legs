@@ -1,14 +1,22 @@
 module EightyLegs
   class EightyFormat
     def initialize(filename_or_io)
-      @io = if filename_or_io.is_a?(String)
-        File.open(filename_or_io)
+      if filename_or_io.is_a?(String)
+        initialize_with_filename(filename_or_io)
       elsif filename_or_io.is_a?(IO)
-        filename_or_io
+        initialize_with_io(filename_or_io)
       else
         raise TypeError.new(filename_or_io.class)
       end
       check_for_classid_and_version()
+    end
+
+    def initialize_with_filename(filename)
+      initialize_with_io(File.open(filename))
+    end
+
+    def initialize_with_io(io)
+      @io = io
     end
 
     def each(&blk)
