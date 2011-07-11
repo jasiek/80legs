@@ -16,7 +16,10 @@ module EightyLegs
     end
 
     def initialize_with_io(io)
+      @io = Zlib::GzipReader.new(io)
+    rescue Zlib::GzipFile::Error
       @io = io
+      @io.rewind
     end
 
     def each(&blk)
@@ -27,7 +30,8 @@ module EightyLegs
         data = @io.read(data_size)
         blk.call(Entry.new(url, data))
       end
-      @io.seek(8, IO::SEEK_SET)
+      @io.rewind
+      @io.read(8)
     end
 
     private
