@@ -1,6 +1,6 @@
 source :gemcutter
 
-gem 'rake', '0.8.7'
+gem 'rake'
 
 group :development do
   gem "shoulda", ">= 0"
