@@ -3,7 +3,7 @@ module EightyLegs
     def initialize(filename_or_io)
       if filename_or_io.is_a?(String)
         initialize_with_filename(filename_or_io)
-      elsif filename_or_io.is_a?(IO)
+      elsif filename_or_io.respond_to?(:read)
         initialize_with_io(filename_or_io)
       else
         raise TypeError.new(filename_or_io.class)
