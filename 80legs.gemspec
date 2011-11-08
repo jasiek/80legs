@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{80legs}
-  s.version = "0.2.1"
+  s.version = "0.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jan Szumiec"]
-  s.date = %q{2011-11-02}
+  s.authors = [%q{Jan Szumiec}]
+  s.date = %q{2011-11-08}
   s.description = %q{Provides a class for reading .80 files as delivered by 80legs.}
   s.email = %q{jan.szumiec@gmail.com}
   s.extra_rdoc_files = [
@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".rvmrc",
+    "80legs.gemspec",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
@@ -34,9 +36,9 @@ Gem::Specification.new do |s|
     "test/test_eighty_format.rb"
   ]
   s.homepage = %q{http://github.com/jasiek/80legs}
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.6}
   s.summary = %q{80legs' .80 file format reader}
 
   if s.respond_to? :specification_version then
@@ -45,20 +47,20 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rake>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<rake>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
     s.add_dependency(%q<rake>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<bundler>, [">= 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<rcov>, [">= 0"])
   end
