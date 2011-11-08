@@ -10,4 +10,3 @@ pkg
  For rubinius:
 *.rbc
 vendor
-*.gemspec
